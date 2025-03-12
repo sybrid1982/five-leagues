@@ -1,0 +1,24 @@
+[package]
+name = "five-leagues"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[workspace]
+members = ["character_gen", "utils", "warband_gui"]
+
+[workspace.dependencies]
+rand = "0.8"
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
